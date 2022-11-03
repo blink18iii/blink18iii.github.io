@@ -1,0 +1,127 @@
+body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at bottom, #013155 0%, #01162e 100%);
+}
+
+@mixin delays($interval: 50, $startTime: 0, $numberOfDelays: 9) {
+  @for $i from 0 through $numberOfDelays {
+    $ms: $startTime + ($i * $interval);
+    &.delay-#{$ms} {
+      animation-delay: #{$ms}ms;
+    }
+  }
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50px;
+  animation: move 1s infinite;
+  @include delays(100, 0, 9);
+}
+
+.type-1 {
+  width: 1px;
+  height: 1px;
+}
+.type-2 {
+  width: 2px;
+  height: 2px;
+}
+.type-3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 4px;
+  height: 4px;
+
+  &:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 300%;
+    height: 300%;
+    box-sizing: border-box;
+    margin-left: -100%;
+    margin-top: -100%;
+    border-radius: 45px;
+    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 120%;
+    height: 120%;
+    // background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(60, 0, 255, 0.3);
+    animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+
+  0% {
+    background: rgb(255, 255, 255);
+  }
+  /* Adding a step in the middle */
+  50% {
+    background: rgb(249, 220, 133);
+  }
+  100% {
+    background: rgb(235, 226, 54);
+  }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+  0% {
+    background-color: #ffffff;
+    transition: background-color 2s;
+  }
+  50% {
+    background-color: #ffd000;
+    transition: background-color 1s;
+  }
+  100% {
+    background-color: #dcf522;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}

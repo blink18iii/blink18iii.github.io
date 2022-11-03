@@ -1,0 +1,33 @@
+.contact-form {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 10px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin-bottom: 10px;
+        overflow: hidden;
+        display: block;
+        opacity: 0;
+        animation: fadeInUp 1s 2s forwards;
+        clear: both;
+
+        li.half {
+            width: 49%;
+            float: left;
+            margin-left: 2%;
+            clear: none;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+  }
+}
