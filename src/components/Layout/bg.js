@@ -17,6 +17,6 @@ function randomNumber(min, max) {
 
 createStars(1, 87)
 createStars(2, 85)
-createStars(3, 20)
+createStars(3, 30)
 
 export default createStars
