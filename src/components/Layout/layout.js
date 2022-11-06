@@ -7,7 +7,7 @@ import Footer from './footer'
 const Layout = () => {
   return (
     <div className="App">
-      <createStars  />
+      <createStars />
       <Sidebar />
       <div className="page">
         <span className="tags top-tags">&lt;body&gt;</span>
@@ -20,9 +20,8 @@ const Layout = () => {
           <span className="bottom-tag-html">&lt;/html&gt;</span>
         </span>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
-    
   )
 }
 

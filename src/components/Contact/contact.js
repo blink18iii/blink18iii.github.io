@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const nameArray = ['C', 'o', 'n', 't', 'a', 'c', 't', '_', 'm', 'e']
   const refForm = useRef()
 
   useEffect(() => {
@@ -42,7 +43,7 @@ const Contact = () => {
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', '_', 'm', 'e']}
+              strArray={nameArray}
               idx={15}
             />
           </h1>

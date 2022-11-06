@@ -1,7 +1,7 @@
 .home-page {
   .text-zone {
-    position: relative;
-    left: 10%;
+    position: absolute;
+    left: 9%;
     top: 50%;
     transform: translateY(-50%);
     width: 40%;
@@ -41,8 +41,16 @@
     img {
       width: 32px;
       margin-left: 20px;
+      margin-right: 3px;
       height: auto;
       animation: rotateIn 0.5s 1s ease-out both;
+
+      &:hover {
+        background: yellow;
+        color: #000000;
+        // glow
+        filter: drop-shadow(1px 1px 7px rgb(255, 255, 255)) invert(75%);
+      }
     }
   }
 }
@@ -76,6 +84,7 @@ h2 {
   animation: border-dance 3.2s infinite alternate backwards,
     fadeIn 3s 3s backwards;
   white-space: nowrap;
+  margin-left: 95px;
 
   &:hover {
     background: yellow;
@@ -98,5 +107,102 @@ h2 {
   }
   100% {
     opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container.home-page {
+    margin-top: 50px;
+
+    h1 {
+      position: initial;
+      height: auto;
+      font-size: 30px;
+
+      &:before {
+        content: '<h1>';
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        font-size: 20px;
+        position: absolute;
+        margin-top: -10px;
+        left: -50px;
+        opacity: 0.2;
+        line-height: 18px;
+        animation: fadeIn 1.5s 1.9s backwards;
+      }
+
+      &:after {
+        content: '<h1/>';
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        font-size: 20px;
+        line-height: 18px;
+        position: absolute;
+        left: -70px;
+        bottom: -25px;
+        margin-left: 20px;
+        animation: fadeIn 1.5s 1.9s backwards;
+        opacity: 0.2;
+      }
+    }
+  }
+
+  .text-zone h1 {
+    font-size: 38px;
+    margin-left: 25px;
+    margin-top: 125px;
+  }
+
+  .text-zone h2 {
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 25px;
+  }
+
+  h2 {
+    font-size: 15px;
+    margin-left: 25px;
+  }
+
+  .tags,
+  .home-page h1:before,
+  .home-page h1:after {
+    display: none;
+  }
+
+  .home-page .text-zone {
+    position: initial;
+    width: 80%;
+    transform: none;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .home-page .flat-button {
+    float: none;
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 124px;
+  }
+
+  .logo-container {
+    position: relative;
+    width: 100px;
+    height: auto;
+    top: 50px;
+    right: 0;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+  }
+
+  .logo-container svg {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin: auto;
   }
 }

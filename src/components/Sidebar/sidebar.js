@@ -31,14 +31,14 @@ const Sidebar = () => {
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink
           exact="true"
-          activeclassname="active"
+          // activeclassname="active"
           to="/"
           onClick={() => setShowNav(false)}
         >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
         <NavLink
-          activeclassname="active"
+          // activeclassname="active"
           className="about-link"
           to="/about"
           onClick={() => setShowNav(false)}
@@ -54,7 +54,7 @@ const Sidebar = () => {
           <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
         </NavLink> */}
         <NavLink
-          activeclassname="active"
+          // activeclassname="active"
           className="contact-link"
           to="/contact"
           onClick={() => setShowNav(false)}
@@ -76,7 +76,7 @@ const Sidebar = () => {
             rel="noreferrer"
             href="https://www.linkedin.com/in/maksym-nezhoda/"
           >
-            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" className='anchor-icon' />
           </a>
         </li>
         <li>
@@ -85,7 +85,7 @@ const Sidebar = () => {
             rel="noreferrer"
             href="https://github.com/blink18iii"
           >
-            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" className='anchor-icon' />
           </a>
         </li>
       </ul>

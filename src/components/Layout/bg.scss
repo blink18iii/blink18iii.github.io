@@ -3,11 +3,9 @@ body {
   max-width: 600px;
   max-height: 600px;
   background: radial-gradient(ellipse at bottom, #013155 0%, #01162e 100%);
-  background-repeat: round;
-  
 }
 
-@mixin delays($interval: 50, $startTime: 0, $numberOfDelays: 9) {
+@mixin delays($interval: 70, $startTime: 0, $numberOfDelays: 9) {
   @for $i from 0 through $numberOfDelays {
     $ms: $startTime + ($i * $interval);
     &.delay-#{$ms} {
@@ -17,7 +15,7 @@ body {
 }
 
 .star {
-  position: absolute;
+  position: fixed;
   background: white;
   border-radius: 50px;
   animation: move 1s infinite;
@@ -25,7 +23,7 @@ body {
 }
 
 .type-1 {
-  width: 1px;
+  width: 3px;
   height: 1px;
 }
 .type-2 {

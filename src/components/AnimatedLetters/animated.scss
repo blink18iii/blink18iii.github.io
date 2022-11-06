@@ -1,9 +1,8 @@
 .text-animate {
   display: inline-block;
   opacity: 0;
-  animation: bounceIn 1s 0.5s;
-  animation-fill-mode: forwards;
-  min-width: 10;
+  animation: bounceIn 1s 0.5s forwards;
+  min-width: 10px;
 }
 
 .text-animate-hover {
@@ -14,6 +13,7 @@
   &:hover {
     animation: rubberBand 1s;
     color: yellow;
+    filter: drop-shadow(10px 10px 15px rgb(249, 253, 1));
   }
 }
 
