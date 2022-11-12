@@ -4,12 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 
 // list view options and backshadow
 ul {
-  position: relative;
+  // position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ ul {
 
 // separate list items options
 ul li a {
-  position: relative;
+  // position: relative;
   color: white;
   text-decoration: none;
   display: inline-block;
